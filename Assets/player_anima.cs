@@ -15,9 +15,14 @@ public class player_anima : MonoBehaviour
     {
             player_Anima.SetTrigger("Open");
     }
-    else
+    else if (Input.GetKeyDown(KeyCode.R))
     {
-            player_Anima.SetBool("Walk", false);
+            player_Anima.SetTrigger("Attack");
     }
+            else
+            {
+                player_Anima.SetBool("Walk", false);
+            }
     }
+
 }
