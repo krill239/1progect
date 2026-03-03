@@ -20,7 +20,7 @@ public class iispider : MonoBehaviour
 
     void Update()
     {
-        if (Vector3.Distance(transform.position, player.position) <= 5f)
+        if (Vector3.Distance(transform.position, player.position) <= 10f)
         {
             agent.SetDestination(player.position);
         }

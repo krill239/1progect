@@ -30,7 +30,7 @@ public class newcube : MonoBehaviour
         {
             transform.Translate(new Vector3(1, 0, 0) * speed * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             transform.Translate(new Vector3(0, 1, 0) * speedJump * Time.deltaTime);
         }
