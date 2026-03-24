@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class SimplePlayerMovement : MonoBehaviour
 {
-    public float speed = 5f; // Скорость перемещения
-
+  public float speed = 5f; // Скорость перемещения
+  
     void Update()
     {
         float moveHorizontal = Input.GetAxis("Horizontal"); // A/D или стрелки влево/вправо

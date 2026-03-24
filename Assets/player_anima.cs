@@ -11,7 +11,8 @@ public class player_anima : MonoBehaviour
     if (Input.GetKey(KeyCode.W))
     {
             player_Anima.SetBool("Walk", true);
-    }else if (Input.GetKeyDown(KeyCode.E))
+    }
+    else if (Input.GetKeyDown(KeyCode.E))
     {
             player_Anima.SetTrigger("Open");
     }
