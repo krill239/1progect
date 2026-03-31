@@ -12,7 +12,7 @@ public class iispider : MonoBehaviour
     private float changeDirectionTimer;
     private float minChange = 10f;
     private float maxChange = 20f;
-    private float heal = 27f;
+     float health = 27f;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();

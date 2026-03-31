@@ -5,10 +5,11 @@ public class newcube : MonoBehaviour
     private int age = 14;
     public float speed = 5f;
     public float jumpForce = 5f;
-    public int heal = 100;
+    public int heal = 1;
     public float maxDamage = 8f;
     public float minDamage = 3f;
     public float Damage;
+    public float health = 100f;
 
     private Rigidbody rb;
     private bool isGrounded;
