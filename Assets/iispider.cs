@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Rendering.Universal;
 
 public class iispider : MonoBehaviour
 {
@@ -12,7 +13,8 @@ public class iispider : MonoBehaviour
     private float changeDirectionTimer;
     private float minChange = 10f;
     private float maxChange = 20f;
-     float health = 27f;
+    float health = 27f;
+    public Animator spider;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -40,5 +42,13 @@ public class iispider : MonoBehaviour
     {
         randomDirection = Random.insideUnitSphere * 10f;
         changeDirectionTimer = Random.Range(minChange, maxChange);
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("OnCollisionEnter");
+        if (other.gameObject.CompareTag("Player"))
+        {
+            spider.SetTrigger("attack");
+        }
     }
 }
